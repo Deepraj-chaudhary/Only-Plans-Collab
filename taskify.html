@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Taskify</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">	
+        <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+
+		<style>
+			.input-box {
+				width: 40%; /* Or any other value */
+			}
+
+			.label-box {
+				width: 40%; /* Or any other value */
+			}
+
+			.task-card {
+				border: 1px solid #000;
+				padding: 10px;
+				margin-bottom: 10px;
+			}
+
+			.top-right {
+				position: fixed;
+				top: 20px;
+				right: 20px;
+			}
+		</style>
+    </head>
+
+    <body style="background-image: url(images/grad1.avif); background-position: center; background-size: cover;">
+        <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+	          <i class="fa fa-bars"></i>
+	          <span class="sr-only">Toggle Menu</span>
+	        </button>
+        </div>
+				<div class="p-4 pt-5">
+		  		<h1><a href="index.html" class="logo">OnlyPlans</a></h1>
+	        <ul class="list-unstyled components mb-5">
+	          <li class="active">
+				<a href="index.html">Dashboard</a>
+	          </li>
+	          <li>
+	            <a href="calendrify.html">Calendrify</a>
+	          </li>
+	          <li>
+              <a href="taskify.html">Taskify</a>
+	          </li>
+	          <li>
+              <a href="notsify.html">ItemShop</a>
+			  </li>
+			  <li>
+				<a href="capsule.html">Time Capsule</a>
+			  </li>
+	        </ul>
+	      </div>
+    	</nav>
+
+        <!--PAGE CONTENT STARTS HERE-->
+        <div id="content" class="p-4 p-md-5 pt-5">
+			<div id="current-tasks">
+				<h3>Current Tasks</h3>
+				<div id="task-cards" class="row"></div>
+			</div>
+			<div class="p-4 p-md-5 top-right" id="add-task" style="background: #866ec7;text-align: center;width: 550px">
+				<h3 style="color: #fff">Add New Task</h3>
+				<form id="task-form">
+					<label for="task-input" style="color:#fff;font-size: medium;" class="label-box">Enter your task:</label>
+					<input type="text" id="task-input" name="task-input" class="input-box"><br>
+
+					<label for="date-input" style="color:#fff;font-size: medium;" class="label-box">Enter due date:</label>
+					<input type="date" id="date-input" name="date-input" class="input-box"><br>
+
+					<label for="time-input" style="color:#fff;font-size: medium;" class="label-box">Enter reward amount:</label>
+					<input type="number" id="reward-input" name="reward-input" class="input-box"><br>
+
+					<button type="button" id="add-btn" onclick="event.preventDefault(); addTask();">Add Task</button>
+				</form>
+			</div>
+		</div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+		<script src="js/taskify.js"></script>
+    </body>
+</html>
